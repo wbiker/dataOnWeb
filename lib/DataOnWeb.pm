@@ -52,6 +52,8 @@ sub startup {
   $r->get('/')->to('data#show');
   $r->get('/treadmill')->to('data#show_treadmill');
   $r->get('/bicycle')->to('data#show_bicycle');
+  $r->get('/users')->to('user#list_users');
+  $r->get('/get_users')->to('user#get_users');
 }
 
 1;

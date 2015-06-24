@@ -158,3 +158,355 @@ Compilation failed in require at (eval 280) line 1, <DATA> line 2231.
 [Tue Jun 23 21:00:28 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
 [Tue Jun 23 21:00:59 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
 [Wed Jun 24 18:28:49 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 18:51:04 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 18:51:22 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 18:51:22 2015] [debug] GET "/"
+[Wed Jun 24 18:51:22 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show"
+[Wed Jun 24 18:51:22 2015] [debug] Rendering template "data/show.html.ep"
+[Wed Jun 24 18:51:22 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 18:51:22 2015] [debug] 200 OK (0.003344s, 299.043/s)
+[Wed Jun 24 18:51:25 2015] [debug] GET "/treadmill"
+[Wed Jun 24 18:51:25 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show_treadmill"
+[Wed Jun 24 18:51:25 2015] [debug] Rendering template "data/show_treadmill.html.ep"
+[Wed Jun 24 18:51:25 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 18:51:25 2015] [debug] 200 OK (0.012930s, 77.340/s)
+[Wed Jun 24 18:51:30 2015] [debug] GET "/users"
+[Wed Jun 24 18:51:30 2015] [debug] Controller "DataOnWeb::Users" does not exist
+[Wed Jun 24 18:51:30 2015] [debug] Rendering template "users/list_users.html.ep"
+[Wed Jun 24 18:51:30 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 18:51:30 2015] [debug] 200 OK (0.003745s, 267.023/s)
+[Wed Jun 24 18:51:40 2015] [debug] GET "/users"
+[Wed Jun 24 18:51:40 2015] [debug] Controller "DataOnWeb::Users" does not exist
+[Wed Jun 24 18:51:40 2015] [debug] Rendering cached template "users/list_users.html.ep"
+[Wed Jun 24 18:51:40 2015] [debug] Rendering cached template "layouts/default.html.ep"
+[Wed Jun 24 18:51:40 2015] [debug] 200 OK (0.001932s, 517.598/s)
+[Wed Jun 24 18:53:10 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 18:53:14 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 18:53:52 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 18:53:54 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 18:54:03 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 18:54:04 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 18:54:04 2015] [debug] GET "/users"
+[Wed Jun 24 18:54:04 2015] [debug] Controller "DataOnWeb::Users" does not exist
+[Wed Jun 24 18:54:04 2015] [debug] Rendering template "users/list_users.html.ep"
+[Wed Jun 24 18:54:04 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 18:54:04 2015] [debug] 200 OK (0.003142s, 318.269/s)
+[Wed Jun 24 18:55:50 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 18:55:53 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 18:55:53 2015] [debug] GET "/users"
+[Wed Jun 24 18:55:53 2015] [debug] Controller "DataOnWeb::Users" does not exist
+[Wed Jun 24 18:55:53 2015] [debug] Rendering template "users/list_users.html.ep"
+[Wed Jun 24 18:55:53 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 18:55:53 2015] [debug] 200 OK (0.003329s, 300.391/s)
+[Wed Jun 24 18:59:46 2015] [debug] GET "/users"
+[Wed Jun 24 18:59:46 2015] [debug] Controller "DataOnWeb::Users" does not exist
+[Wed Jun 24 18:59:46 2015] [debug] Rendering cached template "users/list_users.html.ep"
+[Wed Jun 24 18:59:46 2015] [debug] Rendering cached template "layouts/default.html.ep"
+[Wed Jun 24 18:59:46 2015] [debug] 200 OK (0.001082s, 924.214/s)
+[Wed Jun 24 19:00:31 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:00:34 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:00:34 2015] [debug] GET "/users"
+[Wed Jun 24 19:00:34 2015] [debug] Controller "DataOnWeb::Users" does not exist
+[Wed Jun 24 19:00:34 2015] [debug] Rendering template "users/list_users.html.ep"
+[Wed Jun 24 19:00:34 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:00:34 2015] [debug] 200 OK (0.003108s, 321.750/s)
+[Wed Jun 24 19:00:55 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:01:32 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:01:32 2015] [debug] GET "/users"
+[Wed Jun 24 19:01:32 2015] [debug] Controller "DataOnWeb::Users" does not exist
+[Wed Jun 24 19:01:32 2015] [debug] Rendering template "users/list_users.html.ep"
+[Wed Jun 24 19:01:32 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:01:32 2015] [debug] 200 OK (0.003156s, 316.857/s)
+[Wed Jun 24 19:01:32 2015] [debug] POST "/get_users"
+[Wed Jun 24 19:01:32 2015] [debug] Template "not_found.development.html.ep" not found
+[Wed Jun 24 19:01:32 2015] [debug] Template "not_found.html.ep" not found
+[Wed Jun 24 19:01:32 2015] [debug] Rendering inline template "fd403ab55a4c875e35b42428816134c7"
+[Wed Jun 24 19:01:32 2015] [debug] Rendering inline template "dd85456cf9f44e1e43bebae130a7f9df"
+[Wed Jun 24 19:01:32 2015] [debug] 404 Not Found (0.014954s, 66.872/s)
+[Wed Jun 24 19:12:26 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:12:31 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:12:31 2015] [debug] GET "/users"
+[Wed Jun 24 19:12:31 2015] [debug] Controller "DataOnWeb::Users" does not exist
+[Wed Jun 24 19:12:31 2015] [debug] Rendering template "users/list_users.html.ep"
+[Wed Jun 24 19:12:31 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:12:31 2015] [debug] 200 OK (0.003837s, 260.620/s)
+[Wed Jun 24 19:12:31 2015] [debug] POST "/get_users"
+[Wed Jun 24 19:12:31 2015] [debug] Template "not_found.development.html.ep" not found
+[Wed Jun 24 19:12:31 2015] [debug] Template "not_found.html.ep" not found
+[Wed Jun 24 19:12:31 2015] [debug] Rendering inline template "fd403ab55a4c875e35b42428816134c7"
+[Wed Jun 24 19:12:31 2015] [debug] Rendering inline template "dd85456cf9f44e1e43bebae130a7f9df"
+[Wed Jun 24 19:12:31 2015] [debug] 404 Not Found (0.017622s, 56.747/s)
+[Wed Jun 24 19:14:19 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:14:22 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:14:22 2015] [debug] GET "/users"
+[Wed Jun 24 19:14:22 2015] [debug] Controller "DataOnWeb::Users" does not exist
+[Wed Jun 24 19:14:22 2015] [debug] Rendering template "users/list_users.html.ep"
+[Wed Jun 24 19:14:22 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:14:22 2015] [debug] 200 OK (0.003704s, 269.978/s)
+[Wed Jun 24 19:14:22 2015] [debug] POST "/get_users"
+[Wed Jun 24 19:14:22 2015] [debug] Template "not_found.development.html.ep" not found
+[Wed Jun 24 19:14:22 2015] [debug] Template "not_found.html.ep" not found
+[Wed Jun 24 19:14:22 2015] [debug] Rendering inline template "fd403ab55a4c875e35b42428816134c7"
+[Wed Jun 24 19:14:22 2015] [debug] Rendering inline template "dd85456cf9f44e1e43bebae130a7f9df"
+[Wed Jun 24 19:14:22 2015] [debug] 404 Not Found (0.015548s, 64.317/s)
+[Wed Jun 24 19:22:08 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:22:10 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:22:10 2015] [debug] GET "/users"
+[Wed Jun 24 19:22:10 2015] [debug] Controller "DataOnWeb::Users" does not exist
+[Wed Jun 24 19:22:10 2015] [debug] Rendering template "users/list_users.html.ep"
+[Wed Jun 24 19:22:10 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:22:10 2015] [debug] 200 OK (0.005284s, 189.251/s)
+[Wed Jun 24 19:22:10 2015] [debug] POST "/get_users"
+[Wed Jun 24 19:22:10 2015] [debug] Template "not_found.development.html.ep" not found
+[Wed Jun 24 19:22:10 2015] [debug] Template "not_found.html.ep" not found
+[Wed Jun 24 19:22:10 2015] [debug] Rendering inline template "fd403ab55a4c875e35b42428816134c7"
+[Wed Jun 24 19:22:10 2015] [debug] Rendering inline template "dd85456cf9f44e1e43bebae130a7f9df"
+[Wed Jun 24 19:22:10 2015] [debug] 404 Not Found (0.018013s, 55.515/s)
+[Wed Jun 24 19:24:40 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:24:47 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:24:49 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:24:49 2015] [debug] GET "/users"
+[Wed Jun 24 19:24:49 2015] [error] Global symbol "$db" requires explicit package name at lib/DataOnWeb/Controller/User.pm line 16.
+Compilation failed in require at (eval 58) line 1.
+
+[Wed Jun 24 19:24:49 2015] [debug] Template "exception.development.html.ep" not found
+[Wed Jun 24 19:24:49 2015] [debug] Template "exception.html.ep" not found
+[Wed Jun 24 19:24:49 2015] [debug] Rendering inline template "fd403ab55a4c875e35b42428816134c7"
+[Wed Jun 24 19:24:49 2015] [debug] Rendering inline template "dd85456cf9f44e1e43bebae130a7f9df"
+[Wed Jun 24 19:24:49 2015] [debug] 500 Internal Server Error (0.016396s, 60.990/s)
+[Wed Jun 24 19:25:17 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:25:18 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:25:18 2015] [debug] GET "/users"
+[Wed Jun 24 19:25:18 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:25:18 2015] [debug] Template "user/list_users.html.ep" not found
+[Wed Jun 24 19:25:18 2015] [debug] Nothing has been rendered, expecting delayed response
+[Wed Jun 24 19:25:26 2015] [debug] GET "/users"
+[Wed Jun 24 19:25:26 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:25:26 2015] [debug] Template "user/list_users.html.ep" not found
+[Wed Jun 24 19:25:26 2015] [debug] Nothing has been rendered, expecting delayed response
+[Wed Jun 24 19:25:41 2015] [debug] Inactivity timeout
+[Wed Jun 24 19:25:41 2015] [debug] GET "/users"
+[Wed Jun 24 19:25:41 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:25:41 2015] [debug] Template "user/list_users.html.ep" not found
+[Wed Jun 24 19:25:41 2015] [debug] Nothing has been rendered, expecting delayed response
+[Wed Jun 24 19:25:52 2015] [debug] GET "/users"
+[Wed Jun 24 19:25:52 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:25:52 2015] [debug] Template "user/list_users.html.ep" not found
+[Wed Jun 24 19:25:52 2015] [debug] Nothing has been rendered, expecting delayed response
+[Wed Jun 24 19:26:07 2015] [debug] Inactivity timeout
+[Wed Jun 24 19:26:11 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:26:12 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:26:12 2015] [debug] GET "/users"
+[Wed Jun 24 19:26:12 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:26:12 2015] [debug] Template "user/list_users.html.ep" not found
+[Wed Jun 24 19:26:12 2015] [debug] Nothing has been rendered, expecting delayed response
+[Wed Jun 24 19:26:18 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:26:20 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:26:20 2015] [debug] GET "/users"
+[Wed Jun 24 19:26:20 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:26:20 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 19:26:20 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:26:20 2015] [debug] 200 OK (0.003916s, 255.363/s)
+[Wed Jun 24 19:26:20 2015] [debug] POST "/get_users"
+[Wed Jun 24 19:26:20 2015] [debug] Template "not_found.development.html.ep" not found
+[Wed Jun 24 19:26:20 2015] [debug] Template "not_found.html.ep" not found
+[Wed Jun 24 19:26:20 2015] [debug] Rendering inline template "fd403ab55a4c875e35b42428816134c7"
+[Wed Jun 24 19:26:20 2015] [debug] Rendering inline template "dd85456cf9f44e1e43bebae130a7f9df"
+[Wed Jun 24 19:26:20 2015] [debug] 404 Not Found (0.017840s, 56.054/s)
+[Wed Jun 24 19:27:00 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:27:07 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:27:15 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:27:28 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:27:30 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:27:30 2015] [debug] GET "/users"
+[Wed Jun 24 19:27:30 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:27:30 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 19:27:30 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:27:30 2015] [debug] 200 OK (0.004446s, 224.921/s)
+[Wed Jun 24 19:27:30 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:27:30 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:27:30 2015] [debug] 200 OK (0.004715s, 212.089/s)
+[Wed Jun 24 19:28:12 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:28:27 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:28:28 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:28:28 2015] [debug] GET "/users"
+[Wed Jun 24 19:28:28 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:28:28 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 19:28:28 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:28:28 2015] [debug] 200 OK (0.003723s, 268.601/s)
+[Wed Jun 24 19:28:29 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:28:29 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:28:29 2015] [debug] 200 OK (0.004667s, 214.270/s)
+[Wed Jun 24 19:29:00 2015] [debug] GET "/users"
+[Wed Jun 24 19:29:00 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:29:00 2015] [debug] Rendering cached template "user/list_users.html.ep"
+[Wed Jun 24 19:29:00 2015] [debug] Rendering cached template "layouts/default.html.ep"
+[Wed Jun 24 19:29:00 2015] [debug] 200 OK (0.000695s, 1438.849/s)
+[Wed Jun 24 19:29:01 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:29:01 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:29:01 2015] [debug] 200 OK (0.000598s, 1672.241/s)
+[Wed Jun 24 19:29:11 2015] [debug] GET "/users"
+[Wed Jun 24 19:29:11 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:29:11 2015] [debug] Rendering cached template "user/list_users.html.ep"
+[Wed Jun 24 19:29:11 2015] [debug] Rendering cached template "layouts/default.html.ep"
+[Wed Jun 24 19:29:11 2015] [debug] 200 OK (0.000665s, 1503.759/s)
+[Wed Jun 24 19:29:11 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:29:11 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:29:11 2015] [debug] 200 OK (0.000560s, 1785.714/s)
+[Wed Jun 24 19:32:16 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:32:18 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:32:18 2015] [debug] GET "/users"
+[Wed Jun 24 19:32:18 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:32:18 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 19:32:18 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:32:18 2015] [debug] 200 OK (0.004478s, 223.314/s)
+[Wed Jun 24 19:32:18 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:32:18 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:32:18 2015] [debug] 200 OK (0.004757s, 210.217/s)
+[Wed Jun 24 19:32:58 2015] [debug] GET "/users"
+[Wed Jun 24 19:32:58 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:32:58 2015] [debug] Rendering cached template "user/list_users.html.ep"
+[Wed Jun 24 19:32:58 2015] [debug] Rendering cached template "layouts/default.html.ep"
+[Wed Jun 24 19:32:58 2015] [debug] 200 OK (0.000739s, 1353.180/s)
+[Wed Jun 24 19:32:58 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:32:58 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:32:58 2015] [debug] 200 OK (0.000542s, 1845.018/s)
+[Wed Jun 24 19:37:37 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:39:31 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:39:34 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:39:34 2015] [debug] GET "/users"
+[Wed Jun 24 19:39:34 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:39:34 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 19:39:34 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:39:34 2015] [debug] 200 OK (0.004309s, 232.072/s)
+[Wed Jun 24 19:39:34 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:39:34 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:39:34 2015] [debug] 200 OK (0.004843s, 206.484/s)
+[Wed Jun 24 19:40:33 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:40:35 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:40:35 2015] [debug] GET "/users"
+[Wed Jun 24 19:40:35 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:40:35 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 19:40:35 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:40:35 2015] [debug] 200 OK (0.004105s, 243.605/s)
+[Wed Jun 24 19:40:35 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:40:35 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:40:35 2015] [debug] 200 OK (0.004712s, 212.224/s)
+[Wed Jun 24 19:46:32 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:46:34 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:46:34 2015] [debug] GET "/users"
+[Wed Jun 24 19:46:34 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:46:34 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 19:46:34 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:46:34 2015] [debug] 200 OK (0.003781s, 264.480/s)
+[Wed Jun 24 19:47:30 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:47:31 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:47:31 2015] [debug] GET "/users"
+[Wed Jun 24 19:47:31 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:47:31 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 19:47:31 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:47:31 2015] [debug] 200 OK (0.003817s, 261.986/s)
+[Wed Jun 24 19:47:31 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:47:31 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:47:31 2015] [debug] 200 OK (0.004884s, 204.750/s)
+[Wed Jun 24 19:49:03 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:49:06 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:49:06 2015] [debug] GET "/users"
+[Wed Jun 24 19:49:06 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:49:06 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 19:49:06 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:49:06 2015] [debug] 200 OK (0.004497s, 222.370/s)
+[Wed Jun 24 19:49:07 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:49:07 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:49:07 2015] [debug] 200 OK (0.004908s, 203.749/s)
+[Wed Jun 24 19:49:17 2015] [debug] GET "/users"
+[Wed Jun 24 19:49:17 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:49:17 2015] [debug] Rendering cached template "user/list_users.html.ep"
+[Wed Jun 24 19:49:17 2015] [debug] Rendering cached template "layouts/default.html.ep"
+[Wed Jun 24 19:49:17 2015] [debug] 200 OK (0.000764s, 1308.901/s)
+[Wed Jun 24 19:49:17 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:49:17 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:49:17 2015] [debug] 200 OK (0.000538s, 1858.736/s)
+[Wed Jun 24 19:52:27 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:52:56 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:52:57 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:52:57 2015] [debug] GET "/users"
+[Wed Jun 24 19:52:57 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:52:57 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 19:52:57 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:52:57 2015] [debug] 200 OK (0.003971s, 251.826/s)
+[Wed Jun 24 19:52:57 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:52:57 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:52:57 2015] [debug] 200 OK (0.004772s, 209.556/s)
+[Wed Jun 24 19:53:54 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:53:55 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:53:55 2015] [debug] GET "/users"
+[Wed Jun 24 19:53:55 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:53:55 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 19:53:55 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:53:55 2015] [debug] 200 OK (0.006106s, 163.773/s)
+[Wed Jun 24 19:53:55 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:53:55 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:53:55 2015] [debug] 200 OK (0.004815s, 207.684/s)
+[Wed Jun 24 19:54:28 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:54:29 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:54:29 2015] [debug] GET "/users"
+[Wed Jun 24 19:54:29 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:54:29 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 19:54:29 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:54:29 2015] [debug] 200 OK (0.004582s, 218.245/s)
+[Wed Jun 24 19:54:30 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:54:30 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:54:30 2015] [debug] 200 OK (0.004808s, 207.987/s)
+[Wed Jun 24 19:55:42 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:55:42 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:55:42 2015] [debug] GET "/users"
+[Wed Jun 24 19:55:42 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:55:42 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 19:55:42 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:55:42 2015] [debug] 200 OK (0.003729s, 268.168/s)
+[Wed Jun 24 19:55:42 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:55:42 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:55:42 2015] [debug] 200 OK (0.004886s, 204.666/s)
+[Wed Jun 24 19:56:11 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:57:03 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 19:57:04 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 19:57:04 2015] [debug] GET "/users"
+[Wed Jun 24 19:57:04 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 19:57:04 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 19:57:04 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 19:57:04 2015] [debug] 200 OK (0.003797s, 263.366/s)
+[Wed Jun 24 19:57:04 2015] [debug] GET "/get_users"
+[Wed Jun 24 19:57:04 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 19:57:04 2015] [debug] 200 OK (0.004880s, 204.918/s)
+[Wed Jun 24 20:03:41 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 20:03:43 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 20:03:43 2015] [debug] GET "/users"
+[Wed Jun 24 20:03:43 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 20:03:43 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 20:03:43 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 20:03:43 2015] [debug] 200 OK (0.004213s, 237.361/s)
+[Wed Jun 24 20:03:44 2015] [debug] GET "/get_users"
+[Wed Jun 24 20:03:44 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 20:03:44 2015] [debug] 200 OK (0.004883s, 204.792/s)
+[Wed Jun 24 20:04:21 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 20:04:22 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 20:04:22 2015] [debug] GET "/users"
+[Wed Jun 24 20:04:22 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 20:04:22 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 20:04:22 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 20:04:22 2015] [debug] 200 OK (0.004566s, 219.010/s)
+[Wed Jun 24 20:04:22 2015] [debug] GET "/get_users"
+[Wed Jun 24 20:04:22 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 20:04:22 2015] [debug] 200 OK (0.004613s, 216.779/s)
+[Wed Jun 24 20:08:17 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 20:08:48 2015] [debug] Your secret passphrase needs to be changed
+[Wed Jun 24 20:08:48 2015] [debug] GET "/users"
+[Wed Jun 24 20:08:48 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "list_users"
+[Wed Jun 24 20:08:48 2015] [debug] Rendering template "user/list_users.html.ep"
+[Wed Jun 24 20:08:48 2015] [debug] Rendering template "layouts/default.html.ep"
+[Wed Jun 24 20:08:48 2015] [debug] 200 OK (0.005727s, 174.611/s)
+[Wed Jun 24 20:08:48 2015] [debug] GET "/get_users"
+[Wed Jun 24 20:08:48 2015] [debug] Routing to controller "DataOnWeb::Controller::User" and action "get_users"
+[Wed Jun 24 20:08:48 2015] [debug] 200 OK (0.004841s, 206.569/s)
+[Wed Jun 24 20:16:45 2015] [debug] Reading configuration file "/data/repos/dataOnWeb/data_on_web.conf"

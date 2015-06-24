@@ -1,0 +1,91 @@
+% layout 'default';
+% title 'Welcome';
+
+<table id="userstable">
+</table>
+
+<div id="tb" style="height:auto">
+    <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="append()">Append</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="removeit()">Remove</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true" onclick="accept()">Accept</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true" onclick="reject()">Reject</a>
+ 	<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-search',plain:true" onclick="getChanges()">GetChanges</a>
+</div>
+
+<script>
+	var editIndex = undefined;
+
+	function endEditing() {
+		console.log("editIndex: " + editIndex);
+		if(editIndex == undefined) { return true }
+		if($('#userstable').datagrid('validateRow', editIndex)) {
+			console.log("call endEdit");
+			$('#userstable').datagrid('endEdit', editIndex);
+			editIndex = undefined;
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	function append() {
+		if(endEditing()) {
+			$('#userstable').datagrid('appendRow', {});
+			editIndex = $('#userstable').datagrid('getRows').length-1;
+			$('#userstable').datagrid('selectRow', editIndex)
+						   .datagrid('beginEdit', editIndex);
+		}
+	}
+
+	function accept() {
+		var rowIndex = editIndex;
+		if(endEditing()) {
+			$('#userstable').datagrid('acceptChanges');
+			console.log("Row index to send: " + rowIndex);
+			var row = $('#userstable').datagrid('getRows')[rowIndex];
+			console.log(row);
+		}
+	}
+
+	function removeit() {
+		if(editIndex == undefined) { return }
+		$('#userstable').datagrid('cancelEdit', editIndex)
+						.datagrid('deleteRow', editIndex);
+		editIndex = undefined;
+	}
+
+	function reject() {
+		$('#userstable').datagrid('rejectChanges');
+	}
+
+	function onClickSell(index, field) {
+		console.log("CLicked on cell " + field + " in row " + index);
+		if(editIndex != undex) {
+			if(endEditing()) {
+				$('#userstable').datagrid('selectRow', index)
+								.datagrid('beginEdit', index);
+				var ed = $('#userstable').datagrid('getEditor', {index:index,field:field});
+				($(ed.target).data('textbox') ? $(ed.target).textbox('textbox') : $(ed.target)).focus();
+				editIndex = index;
+			}
+			else {
+				$('#userstable').datagrid('selectRow', editIndex);
+			}
+		}
+	}
+
+	$(document).ready(function(){
+		$('#userstable').datagrid({
+			url: 'get_users',
+			method: 'GET',
+			toolbar: '#tb',
+			singleSelect: true,
+			onClickSell: onClickSell,
+			columns: [[
+				{field:'id',title:'ID',width:100},
+				{field:'name',title:'Name',width:100,editor:'textbox'}
+			]]
+		});
+	});
+</script>
