@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head><title><%= title %></title></head>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/js/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/js/easyui/themes/icon.css">
+    <script type="text/javascript" src="/js/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/easyui/jquery.easyui.min.js"></script>
+    </head>
+<div style="padding:5px;background:#fafafa;width:500px;border:1px solid #ccc">
+    <a href="/treadmill" class="easyui-linkbutton" plain="true">Treadmill</a>
+    <a href="/bicycle" class="easyui-linkbutton" plain="true">Bicycle</a>
+</div>
   <body><%= content %></body>
 </html>

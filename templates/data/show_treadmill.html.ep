@@ -1,0 +1,8 @@
+% layout 'default';
+% title 'Welcome';
+
+% my $treadmill_entries = stash('treadmill_entries');
+% for my $tm_entry (@$treadmill_entries) {
+    <%= $tm_entry->{treadmill_energy} %><br/>
+    <%= $tm_entry->{treadmill_distance} %><br/>
+% }

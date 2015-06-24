@@ -1,0 +1,160 @@
+[Mon Jun 22 20:37:04 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 20:37:09 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 20:37:09 2015] [info] Listening at "http://*:3000"
+[Mon Jun 22 20:37:23 2015] [debug] Your secret passphrase needs to be changed
+[Mon Jun 22 20:37:23 2015] [debug] GET "/"
+[Mon Jun 22 20:37:23 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show"
+[Mon Jun 22 20:37:23 2015] [debug] Template "data/show.html.ep" not found
+[Mon Jun 22 20:37:23 2015] [debug] Template "not_found.development.html.ep" not found
+[Mon Jun 22 20:37:23 2015] [debug] Template "not_found.html.ep" not found
+[Mon Jun 22 20:37:23 2015] [debug] Rendering inline template "64a586e608c51bbacaabb753ef57cd19"
+[Mon Jun 22 20:37:23 2015] [debug] Rendering inline template "8340368246374291041c72d7b4edb14d"
+[Mon Jun 22 20:37:23 2015] [debug] 404 Not Found (0.021862s, 45.741/s)
+[Mon Jun 22 20:38:07 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 20:38:39 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 20:39:03 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 20:39:21 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 20:40:00 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 20:40:04 2015] [debug] Your secret passphrase needs to be changed
+[Mon Jun 22 20:40:04 2015] [debug] GET "/"
+[Mon Jun 22 20:40:04 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show"
+[Mon Jun 22 20:40:04 2015] [debug] Rendering template "data/show.html.ep"
+[Mon Jun 22 20:40:04 2015] [debug] Rendering template "layouts/default.html.ep"
+[Mon Jun 22 20:40:04 2015] [debug] 200 OK (0.007751s, 129.016/s)
+[Mon Jun 22 20:44:46 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 20:46:15 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 20:49:42 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 20:49:45 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 20:51:01 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 20:51:04 2015] [debug] Your secret passphrase needs to be changed
+[Mon Jun 22 20:51:04 2015] [debug] GET "/"
+[Mon Jun 22 20:51:04 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show"
+[Mon Jun 22 20:51:04 2015] [debug] Rendering template "data/show.html.ep"
+[Mon Jun 22 20:51:04 2015] [error] Global symbol "$msg" requires explicit package name at template data/show.html.ep line 3, <DATA> line 2231.
+1: % layout 'default';
+2: % title 'Welcome';
+3: <h2><%= $msg %></h2>
+4: This page was generated from the template "templates/example/welcome.html.ep"
+5: and the layout "templates/layouts/default.html.ep",
+6: <a href="<%== url_for %>">click here</a> to reload the page or
+7: <a href="/index.html">here</a> to move forward to a static page.
+
+[Mon Jun 22 20:51:04 2015] [debug] Template "exception.development.html.ep" not found
+[Mon Jun 22 20:51:04 2015] [debug] Template "exception.html.ep" not found
+[Mon Jun 22 20:51:04 2015] [debug] Rendering inline template "64a586e608c51bbacaabb753ef57cd19"
+[Mon Jun 22 20:51:04 2015] [debug] Rendering inline template "8340368246374291041c72d7b4edb14d"
+[Mon Jun 22 20:51:04 2015] [debug] 500 Internal Server Error (0.030278s, 33.027/s)
+[Mon Jun 22 20:51:19 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 20:51:37 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 20:51:44 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 20:51:46 2015] [debug] Your secret passphrase needs to be changed
+[Mon Jun 22 20:51:46 2015] [debug] GET "/"
+[Mon Jun 22 20:51:46 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show"
+[Mon Jun 22 20:51:46 2015] [debug] Rendering template "data/show.html.ep"
+[Mon Jun 22 20:51:46 2015] [debug] Rendering template "layouts/default.html.ep"
+[Mon Jun 22 20:51:46 2015] [debug] 200 OK (0.004168s, 239.923/s)
+[Mon Jun 22 21:06:22 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 21:06:26 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 21:07:01 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 21:07:09 2015] [debug] Your secret passphrase needs to be changed
+[Mon Jun 22 21:07:09 2015] [debug] GET "/"
+[Mon Jun 22 21:07:09 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show"
+[Mon Jun 22 21:07:09 2015] [debug] Rendering template "data/show.html.ep"
+[Mon Jun 22 21:07:09 2015] [debug] Rendering template "layouts/default.html.ep"
+[Mon Jun 22 21:07:09 2015] [debug] 200 OK (0.008747s, 114.325/s)
+[Mon Jun 22 21:08:29 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 21:08:31 2015] [debug] Your secret passphrase needs to be changed
+[Mon Jun 22 21:08:31 2015] [debug] GET "/"
+[Mon Jun 22 21:08:31 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show"
+[Mon Jun 22 21:08:31 2015] [debug] Rendering template "data/show.html.ep"
+[Mon Jun 22 21:08:31 2015] [debug] Rendering template "layouts/default.html.ep"
+[Mon Jun 22 21:08:31 2015] [debug] 200 OK (0.007635s, 130.976/s)
+[Mon Jun 22 21:08:41 2015] [debug] GET "/treadmill"
+[Mon Jun 22 21:08:41 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show_treadmill"
+[Mon Jun 22 21:08:41 2015] [debug] Template "data/show_treadmill.html.ep" not found
+[Mon Jun 22 21:08:41 2015] [debug] Nothing has been rendered, expecting delayed response
+[Mon Jun 22 21:08:52 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 21:08:52 2015] [debug] Your secret passphrase needs to be changed
+[Mon Jun 22 21:08:52 2015] [debug] GET "/treadmill"
+[Mon Jun 22 21:08:52 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show_treadmill"
+[Mon Jun 22 21:08:52 2015] [debug] Template "data/show_treadmill.html.ep" not found
+[Mon Jun 22 21:08:52 2015] [debug] Nothing has been rendered, expecting delayed response
+[Mon Jun 22 21:09:02 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Mon Jun 22 21:09:14 2015] [debug] Your secret passphrase needs to be changed
+[Mon Jun 22 21:09:14 2015] [debug] GET "/"
+[Mon Jun 22 21:09:14 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show"
+[Mon Jun 22 21:09:14 2015] [debug] Rendering template "data/show.html.ep"
+[Mon Jun 22 21:09:14 2015] [debug] Rendering template "layouts/default.html.ep"
+[Mon Jun 22 21:09:14 2015] [debug] 200 OK (0.004411s, 226.706/s)
+[Tue Jun 23 20:33:28 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Tue Jun 23 20:33:34 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Tue Jun 23 20:48:33 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Tue Jun 23 20:48:59 2015] [debug] Your secret passphrase needs to be changed
+[Tue Jun 23 20:48:59 2015] [debug] GET "/treadmill"
+[Tue Jun 23 20:48:59 2015] [error] Can't modify constant item in scalar assignment at lib/DataOnWeb/Controller/Data.pm line 20, near "],"
+Global symbol "@treadmill_entry" requires explicit package name at lib/DataOnWeb/Controller/Data.pm line 21, <DATA> line 2231.
+Global symbol "@treadmill_entry" requires explicit package name at lib/DataOnWeb/Controller/Data.pm line 22, <DATA> line 2231.
+Global symbol "@treadmill_entry" requires explicit package name at lib/DataOnWeb/Controller/Data.pm line 23, <DATA> line 2231.
+Global symbol "@treadmill_entry" requires explicit package name at lib/DataOnWeb/Controller/Data.pm line 24, <DATA> line 2231.
+Compilation failed in require at (eval 280) line 1, <DATA> line 2231.
+
+[Tue Jun 23 20:48:59 2015] [debug] Template "exception.development.html.ep" not found
+[Tue Jun 23 20:48:59 2015] [debug] Template "exception.html.ep" not found
+[Tue Jun 23 20:48:59 2015] [debug] Rendering inline template "64a586e608c51bbacaabb753ef57cd19"
+[Tue Jun 23 20:48:59 2015] [debug] Rendering inline template "8340368246374291041c72d7b4edb14d"
+[Tue Jun 23 20:48:59 2015] [debug] 500 Internal Server Error (0.044565s, 22.439/s)
+[Tue Jun 23 20:49:23 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Tue Jun 23 20:49:38 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Tue Jun 23 20:49:52 2015] [debug] Your secret passphrase needs to be changed
+[Tue Jun 23 20:49:52 2015] [debug] GET "/treadmill"
+[Tue Jun 23 20:49:52 2015] [error] Global symbol "@treadmill_entry" requires explicit package name at lib/DataOnWeb/Controller/Data.pm line 21, <DATA> line 2231.
+Global symbol "@treadmill_entry" requires explicit package name at lib/DataOnWeb/Controller/Data.pm line 22, <DATA> line 2231.
+Global symbol "@treadmill_entry" requires explicit package name at lib/DataOnWeb/Controller/Data.pm line 23, <DATA> line 2231.
+Global symbol "@treadmill_entry" requires explicit package name at lib/DataOnWeb/Controller/Data.pm line 24, <DATA> line 2231.
+Compilation failed in require at (eval 280) line 1, <DATA> line 2231.
+
+[Tue Jun 23 20:49:52 2015] [debug] Template "exception.development.html.ep" not found
+[Tue Jun 23 20:49:52 2015] [debug] Template "exception.html.ep" not found
+[Tue Jun 23 20:49:52 2015] [debug] Rendering inline template "64a586e608c51bbacaabb753ef57cd19"
+[Tue Jun 23 20:49:52 2015] [debug] Rendering inline template "8340368246374291041c72d7b4edb14d"
+[Tue Jun 23 20:49:52 2015] [debug] 500 Internal Server Error (0.033501s, 29.850/s)
+[Tue Jun 23 20:50:41 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Tue Jun 23 20:50:50 2015] [debug] Your secret passphrase needs to be changed
+[Tue Jun 23 20:50:50 2015] [debug] GET "/treadmill"
+[Tue Jun 23 20:50:50 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show_treadmill"
+[Tue Jun 23 20:50:50 2015] [debug] Template "data/show_treadmill.html.ep" not found
+[Tue Jun 23 20:50:50 2015] [debug] Template "not_found.development.html.ep" not found
+[Tue Jun 23 20:50:50 2015] [debug] Template "not_found.html.ep" not found
+[Tue Jun 23 20:50:50 2015] [debug] Rendering inline template "64a586e608c51bbacaabb753ef57cd19"
+[Tue Jun 23 20:50:50 2015] [debug] Rendering inline template "8340368246374291041c72d7b4edb14d"
+[Tue Jun 23 20:50:50 2015] [debug] 404 Not Found (0.033963s, 29.444/s)
+[Tue Jun 23 20:51:05 2015] [debug] GET "/bicycle"
+[Tue Jun 23 20:51:05 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show_bicycle"
+[Tue Jun 23 20:51:05 2015] [debug] Template "data/show_bicycle.html.ep" not found
+[Tue Jun 23 20:51:05 2015] [debug] Nothing has been rendered, expecting delayed response
+[Tue Jun 23 20:51:08 2015] [debug] GET "/treadmill"
+[Tue Jun 23 20:51:08 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show_treadmill"
+[Tue Jun 23 20:51:08 2015] [debug] Template "data/show_treadmill.html.ep" not found
+[Tue Jun 23 20:51:08 2015] [debug] Template "not_found.development.html.ep" not found
+[Tue Jun 23 20:51:08 2015] [debug] Template "not_found.html.ep" not found
+[Tue Jun 23 20:51:08 2015] [debug] Rendering cached inline template "64a586e608c51bbacaabb753ef57cd19"
+[Tue Jun 23 20:51:08 2015] [debug] Rendering cached inline template "8340368246374291041c72d7b4edb14d"
+[Tue Jun 23 20:51:08 2015] [debug] 404 Not Found (0.007899s, 126.598/s)
+[Tue Jun 23 20:51:23 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Tue Jun 23 20:52:48 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Tue Jun 23 20:52:58 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Tue Jun 23 20:58:02 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Tue Jun 23 20:58:20 2015] [debug] Your secret passphrase needs to be changed
+[Tue Jun 23 20:58:20 2015] [debug] GET "/treadmill"
+[Tue Jun 23 20:58:20 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show_treadmill"
+[Tue Jun 23 20:58:20 2015] [debug] Rendering template "data/show_treadmill.html.ep"
+[Tue Jun 23 20:58:20 2015] [debug] Rendering template "layouts/default.html.ep"
+[Tue Jun 23 20:58:20 2015] [debug] 200 OK (0.009431s, 106.033/s)
+[Tue Jun 23 20:58:23 2015] [debug] GET "/treadmill"
+[Tue Jun 23 20:58:23 2015] [debug] Routing to controller "DataOnWeb::Controller::Data" and action "show_treadmill"
+[Tue Jun 23 20:58:23 2015] [debug] Rendering cached template "data/show_treadmill.html.ep"
+[Tue Jun 23 20:58:23 2015] [debug] Rendering cached template "layouts/default.html.ep"
+[Tue Jun 23 20:58:23 2015] [debug] 200 OK (0.002930s, 341.297/s)
+[Tue Jun 23 21:00:28 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Tue Jun 23 21:00:59 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
+[Wed Jun 24 18:28:49 2015] [debug] Reading configuration file "/home/wolf/repos/dataOnWeb/data_on_web.conf"
