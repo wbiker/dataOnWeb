@@ -1,7 +1,7 @@
 % layout 'default';
 % title 'Welcome';
 
-<table id="userstable">
+<table id="tm">
 </table>
 
 <div id="tb" style="height:auto">
@@ -16,11 +16,20 @@
 	var editIndex = undefined;
 
 	function endEditing() {
-		console.log("editIndex: " + editIndex);
 		if(editIndex == undefined) { return true }
-		if($('#userstable').datagrid('validateRow', editIndex)) {
-			console.log("call endEdit");
-			$('#userstable').datagrid('endEdit', editIndex);
+		if($('#tm').datagrid('validateRow', editIndex)) {
+            var ed = $('#tm').datagrid('getEditor', {index:editIndex,field:'user'});
+            var user_id = $(ed.target).combobox('getValue');
+            var user_name = $(ed.target).combobox('getText');
+            console.log(user_id);
+            console.log(user_name);
+            console.log("row");
+            var row = $('#tm').datagrid('getRows')[editIndex];
+            console.log(row);
+            $('#tm').datagrid('getRows')[editIndex]['user'] = user_name;
+            console.log(row);
+            console.log($('#tm').datagrid('getRows')[editIndex]);
+			$('#tm').datagrid('endEdit', editIndex);
 			editIndex = undefined;
 			return true;
 		}
@@ -31,19 +40,19 @@
 
 	function append() {
 		if(endEditing()) {
-			$('#userstable').datagrid('appendRow', { "id": -1 });
-			editIndex = $('#userstable').datagrid('getRows').length-1;
-			$('#userstable').datagrid('selectRow', editIndex)
+			$('#tm').datagrid('appendRow', {});
+			editIndex = $('#tm').datagrid('getRows').length-1;
+			$('#tm').datagrid('selectRow', editIndex)
 						   .datagrid('beginEdit', editIndex);
 		}
 	}
 
 	function accept() {
 		var rowIndex = editIndex;
-        var rows = $('#userstable').datagrid('getChanges');
+        var rows = $('#tm').datagrid('getChanges');
         console.log(rows);
 		if(endEditing()) {
-			$('#userstable').datagrid('acceptChanges');
+			$('#tm').datagrid('acceptChanges');
             rows.forEach(function(row, index) {
                 if(null != row) {
                     // send new user to server
@@ -55,33 +64,33 @@
                     }, "json");
                 }
             });
-            //$('#userstable').datagrid('reload');
+            //$('#tm').datagrid('reload');
 		}
 	}
 
 	function removeit() {
 		if(editIndex != undefined)
         {
-		    $('#userstable').datagrid('cancelEdit', editIndex);
+		    $('#tm').datagrid('cancelEdit', editIndex);
 		    editIndex = undefined;
         }
-        var row = $('#userstable').datagrid('getSelected');
+        var row = $('#tm').datagrid('getSelected');
         if(null == row) { return }
         $.post('remove_user', row, function(data, status, xhr) {
             //Successfully send to server and received an answer
             console.log(status);
             console.log(data);
-            $('#userstable').datagrid('reload');
+            $('#tm').datagrid('reload');
         }, "json");
 
 	}
 
 	function reject() {
-		$('#userstable').datagrid('rejectChanges');
+		$('#tm').datagrid('rejectChanges');
 	}
 
     function getChanges() {
-        var rows = $('#userstable').datagrid('getChanges');
+        var rows = $('#tm').datagrid('getChanges');
         console.log(rows);
     }
 
@@ -89,30 +98,33 @@
 		console.log("CLicked on cell " + field + " in row " + index);
 		if(editIndex != index) {
 			if(endEditing()) {
-				$('#userstable').datagrid('selectRow', index)
+				$('#tm').datagrid('selectRow', index)
 								.datagrid('beginEdit', index);
-				var ed = $('#userstable').datagrid('getEditor', {index:index,field:field});
+				var ed = $('#tm').datagrid('getEditor', {index:index,field:field});
                 if(null != ed.target) {
 				    ($(ed.target).data('textbox') ? $(ed.target).textbox('textbox') : $(ed.target)).focus();
                 }
 				editIndex = index;
 			}
 			else {
-				$('#userstable').datagrid('selectRow', editIndex);
+				$('#tm').datagrid('selectRow', editIndex);
 			}
 		}
 	}
 
 	$(document).ready(function(){
-		$('#userstable').datagrid({
-			url: 'get_users',
+		$('#tm').datagrid({
+			url: 'get_tm',
 			method: 'GET',
 			toolbar: '#tb',
 			singleSelect: true,
 			onClickCell: onClickCell,
 			columns: [[
 				{field:'id',title:'ID',width:100,hidden:true},
-				{field:'name',title:'Name',width:300,editor:'textbox'}
+				{field:'date',title:'Date',width:300,editor:{type:'datebox',options:{required:true}}},
+				{field:'energy',title:'Energy',width:300,editor:{type:'numberbox',options:{min:0},required:true}},
+				{field:'distance',title:'Distance',width:300,editor:{type:'numberbox',options:{min:0,precision:2},required:true}},
+				{field:'user',title:'User',width:300,editor:{type:'combobox',options:{valueField:'user_id',textField:'user_name',method:'get',url:'get_users_for_combo',required:true}}}
 			]]
 		});
 	});

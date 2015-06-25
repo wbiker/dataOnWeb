@@ -1,0 +1,3 @@
+Mojolicious::Plugin::Database
+Mojolicious::Plugin::Authentication
+Authen::Simple::DBI

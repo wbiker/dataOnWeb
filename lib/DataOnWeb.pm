@@ -50,10 +50,17 @@ sub startup {
 
   # Normal route to controller
   $r->get('/')->to('data#show');
-  $r->get('/treadmill')->to('data#show_treadmill');
+  $r->get('/treadmill')->to('treadmill#show');
+  $r->get('get_tm')->to('treadmill#all_tm');
+  $r->post('/add_tm')->to('treadmill#add_tm');
+  $r->get('/get_users_for_combo')->to(controller => 'treadmill', action => 'get_users');
+
   $r->get('/bicycle')->to('data#show_bicycle');
   $r->get('/users')->to('user#list_users');
   $r->get('/get_users')->to('user#get_users');
+
+  $r->post('/add_user')->to('user#add_user');
+  $r->post('/remove_user')->to('user#remove_user');
 }
 
 1;

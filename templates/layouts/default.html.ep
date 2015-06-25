@@ -10,6 +10,7 @@
 <div style="padding:5px;background:#fafafa;width:500px;border:1px solid #ccc">
     <a href="/treadmill" class="easyui-linkbutton" plain="true">Treadmill</a>
     <a href="/bicycle" class="easyui-linkbutton" plain="true">Bicycle</a>
+    <a href="/users" class="easyui-linkbutton" plain="true">Users</a>
 </div>
   <body><%= content %></body>
 </html>
