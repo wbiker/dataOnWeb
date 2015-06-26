@@ -47,8 +47,12 @@
 		if(endEditing()) {
 			$('#tm').datagrid('acceptChanges');
             rows.forEach(function(row, index) {
+                console.log("accept canged row: " + JSON.stringify(row));
                 if(null != row) {
                     // send new user to server
+                    var ed = $('#tm').datagrid('getEditor', {index:index,field:'user'});
+                    console.log("accept editor user: " + JSON.stringify(ed));
+
                     $.post('add_tm', row, function(data, status, xhr) {
                             // successfully send it to server.
                             // Check the response
@@ -92,15 +96,21 @@
     }
 
 	function onClickCell(index, field) {
-		console.log("CLicked on cell " + field + " in row " + index);
 		if(editIndex != index) {
 			if(endEditing()) {
 				$('#tm').datagrid('selectRow', index)
-								.datagrid('beginEdit', index);
+						.datagrid('beginEdit', index);
 				var ed = $('#tm').datagrid('getEditor', {index:index,field:field});
-                if(null != ed.target) {
-				    ($(ed.target).data('textbox') ? $(ed.target).textbox('textbox') : $(ed.target)).focus();
+                if("user" != field) {
+                    var combo = ($('#tm').datagrid('getEditor', {index:index,field:"user"})).target;
+                    if(null != combo) {
+                        var userName = combo.combobox('getValue');
+                        console.log("onClickCell combobox getValue: " + userName);
+                        console.log("onCickCell combobox: " + JSON.stringify(combo.combobox));
+                        $('#tm').datagrid('getRows')[index]['user_name'] = combo.combobox('getText');
+                    }
                 }
+				($(ed.target).data('textbox') ? $(ed.target).textbox('textbox') : $(ed.target)).focus();
 				editIndex = index;
 			}
 			else {
@@ -125,6 +135,7 @@
                 onClickCell: onClickCell,
                 }},
 						formatter:function(value,row){
+                            console.log("datagrid formatter: " + JSON.stringify(row));
 							return row.user_name;
 						}
                 }
