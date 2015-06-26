@@ -119,8 +119,8 @@
 			columns: [[
 				{field:'id',title:'ID',width:100,hidden:true},
 				{field:'date',title:'Date',width:300,editor:{type:'datebox',options:{required:true}}},
-				{field:'energy',title:'Energy',width:300,editor:{type:'numberbox',options:{min:0}}},
-				{field:'distance',title:'Distance',width:300,editor:{type:'numberbox',options:{min:0,precision:2}}},
+				{field:'energy',title:'Energy',width:300,editor:{type:'numberbox',options:{min:0,required:true}}},
+				{field:'distance',title:'Distance',width:300,editor:{type:'numberbox',options:{min:0,precision:2,required:true}}},
 				{field:'user',title:'User',width:300,editor:{type:'combobox',options:{valueField:'user',textField:'user_name',method:'get',url:'get_users_for_combo',required:true,
                 onClickCell: onClickCell,
                 }},
