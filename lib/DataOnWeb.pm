@@ -49,7 +49,7 @@ sub startup {
   my $r = $self->routes;
 
   # Normal route to controller
-  $r->get('/')->to('data#show');
+  $r->get('/')->to('treadmill#show');
   $r->get('/treadmill')->to('treadmill#show');
   $r->get('get_tm')->to('treadmill#all_tm');
   $r->post('/add_tm')->to('treadmill#add_tm');

@@ -21,14 +21,7 @@
             var ed = $('#tm').datagrid('getEditor', {index:editIndex,field:'user'});
             var user_id = $(ed.target).combobox('getValue');
             var user_name = $(ed.target).combobox('getText');
-            console.log(user_id);
-            console.log(user_name);
-            console.log("row");
-            var row = $('#tm').datagrid('getRows')[editIndex];
-            console.log(row);
-            $('#tm').datagrid('getRows')[editIndex]['user'] = user_name;
-            console.log(row);
-            console.log($('#tm').datagrid('getRows')[editIndex]);
+            $('#tm').datagrid('getRows')[editIndex]['user_name'] = user_name;
 			$('#tm').datagrid('endEdit', editIndex);
 			editIndex = undefined;
 			return true;
@@ -40,7 +33,7 @@
 
 	function append() {
 		if(endEditing()) {
-			$('#tm').datagrid('appendRow', {});
+			$('#tm').datagrid('appendRow', {id: -1 });
 			editIndex = $('#tm').datagrid('getRows').length-1;
 			$('#tm').datagrid('selectRow', editIndex)
 						   .datagrid('beginEdit', editIndex);
@@ -56,7 +49,7 @@
             rows.forEach(function(row, index) {
                 if(null != row) {
                     // send new user to server
-                    $.post('add_user', row, function(data, status, xhr) {
+                    $.post('add_tm', row, function(data, status, xhr) {
                         // successfully send it to server.
                         // Check the response
                         console.log(status);
@@ -121,10 +114,14 @@
 			onClickCell: onClickCell,
 			columns: [[
 				{field:'id',title:'ID',width:100,hidden:true},
-				{field:'date',title:'Date',width:300,editor:{type:'datebox',options:{required:true}}},
-				{field:'energy',title:'Energy',width:300,editor:{type:'numberbox',options:{min:0},required:true}},
-				{field:'distance',title:'Distance',width:300,editor:{type:'numberbox',options:{min:0,precision:2},required:true}},
-				{field:'user',title:'User',width:300,editor:{type:'combobox',options:{valueField:'user_id',textField:'user_name',method:'get',url:'get_users_for_combo',required:true}}}
+				{field:'date',title:'Date',width:300,editor:'datebox'},
+				{field:'energy',title:'Energy',width:300,editor:{type:'numberbox',options:{min:0}}},
+				{field:'distance',title:'Distance',width:300,editor:{type:'numberbox',options:{min:0,precision:2}}},
+				{field:'user',title:'User',width:300,editor:{type:'combobox',options:{valueField:'user',textField:'user_name',method:'get',url:'get_users_for_combo',required:true}},
+						formatter:function(value,row){
+							return row.user_name;
+						}
+                }
 			]]
 		});
 	});
