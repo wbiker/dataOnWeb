@@ -54,6 +54,7 @@ sub startup {
   $r->get('get_tm')->to('treadmill#all_tm');
   $r->post('/add_tm')->to('treadmill#add_tm');
   $r->get('/get_users_for_combo')->to(controller => 'treadmill', action => 'get_users');
+  $r->post('/remove_tm')->to('treadmill#remove_tm');
 
   $r->get('/bicycle')->to('data#show_bicycle');
   $r->get('/users')->to('user#list_users');

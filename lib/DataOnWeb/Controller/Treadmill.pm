@@ -29,6 +29,8 @@ sub all_tm {
     $self->render(json => $treadmill_entries);
 }
 
+# this is used to the the user name to a user id. The client sends just the id and this id is saved in the db
+# So if the clients requested all treadmill entries I look for the user name here to show the user the name instead of the id.
 sub get_all_users_by_id {
     my $self = shift;
     my $db = $self->app->db;
@@ -44,6 +46,8 @@ sub get_all_users_by_id {
     return $users;
 }
 
+# this method is called by the /get_users route.
+# Te client side calls this to get all users and show them in the datagrid user combobox.
 sub get_users {
     my $self = shift;
     my $db = $self->app->db;
@@ -64,16 +68,21 @@ sub add_tm {
     my $db = $self->app->db;
 
     my $id = $self->param('id');
-    my $date = $self->param('date');
-    my $energy = $self->param('energy');
-    my $distance = $self->param('distance');
-    my $user_id = $self->param('user');
+    my $date = $self->param('date') // undef;
+    my $energy = $self->param('energy') // undef;
+    my $distance = $self->param('distance') // undef;
+    my $user_id = $self->param('user') // undef;
 
     say "id ", $id;
     say "date ", $date;
     say "energy ", $energy;
     say "distance ", $distance;
     say "user id ", $user_id;
+
+    return $self->render(json => { error => 1, error_msg => "date not set" }) unless $date =~ /\w+/;;
+    return $self->render(json => { error => 1, error_msg => "energy not set" }) unless $energy =~ /\d+/;
+    return $self->render(json => { error => 1, error_msg => "distance not set" }) unless $distance =~ /\d+\.?\d+/;
+    return $self->render(json => { error => 1, error_msg => "user id not set" }) unless $user_id =~ /\d+/;
     
     if(-1 != $id) {
         $db->do('UPDATE datatreadmill SET treadmill_date = ?, treadmill_energy = ?, treadmill_distance = ?, treadmill_user_id = ?', undef, $date, $energy, $distance, $user_id);
@@ -85,9 +94,18 @@ sub add_tm {
     $self->render(json => "OK");
 }
 
-sub show_bicycle {
+sub remove_tm {
     my $self = shift;
     my $db = $self->app->db;
+
+    my $id = $self->param('id');
+    say "remove id ", $id;
+    
+    if(-1 != $id) {
+        $db->do('DELETE FROM treadmill WHERE treadmill_id = ?', undef, $id);
+    }
+
+    $self->render(json => "OK");
 }
 
 1;
