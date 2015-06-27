@@ -16,12 +16,22 @@
 	var editIndex = undefined;
 
 	function endEditing() {
+		console.log("endEditing");
 		if(editIndex == undefined) { return true }
 		if($('#tm').datagrid('validateRow', editIndex)) {
-            var ed = $('#tm').datagrid('getEditor', {index:editIndex,field:'user'});
-            var user_id = $(ed.target).combobox('getValue');
-            var user_name = $(ed.target).combobox('getText');
-            $('#tm').datagrid('getRows')[editIndex]['user'] = user_name;
+            var ed = $('#tm').datagrid('getEditor', {index:editIndex,field:'user_id'});
+            var user_id = ed.target.combobox('getValue');
+            var user_name = ed.target.combobox('getText');
+			console.log("user_id: " + user_id);
+			console.log("user_name: " + user_name);
+			var row = $('#tm').datagrid('getRows')[editIndex];
+			console.log("row before add cb value: " + JSON.stringify(row));
+            $('#tm').datagrid('getRows')[editIndex]['user_name'] = user_name;
+            $('#tm').datagrid('getRows')[editIndex]['user_id'] = user_id;
+			console.log("row after add cb value: " + JSON.stringify(row));
+
+			ed.target.text('setValue', ed.target.combobox('getText'));
+
 			$('#tm').datagrid('endEdit', editIndex);
 			editIndex = undefined;
 			return true;
@@ -32,6 +42,7 @@
 	}
 
 	function append() {
+		console.log("append");
 		if(endEditing()) {
 			$('#tm').datagrid('appendRow', {id: -1 });
 			editIndex = $('#tm').datagrid('getRows').length-1;
@@ -41,35 +52,45 @@
 	}
 
 	function accept() {
+		console.log("accept");
 		var rowIndex = editIndex;
         var rows = $('#tm').datagrid('getChanges');
-        console.log(rows);
-		if(endEditing()) {
-			$('#tm').datagrid('acceptChanges');
-            rows.forEach(function(row, index) {
-                console.log("accept canged row: " + JSON.stringify(row));
-                if(null != row) {
-                    // send new user to server
-                    var ed = $('#tm').datagrid('getEditor', {index:index,field:'user'});
-                    console.log("accept editor user: " + JSON.stringify(ed));
+        console.log("changed rows: " + JSON.stringify(rows));
 
-                    $.post('add_tm', row, function(data, status, xhr) {
-                            // successfully send it to server.
-                            // Check the response
-                            console.log(status);
-                            console.log(data);
-                            if(1 == data.error) {
-                                $.messager.alert("Error", data.error_msg);
-                            }
-                        }, "json"
-                    );
-                }
-            });
+		if(endEditing()) {
+			if(0 < rows.length) {
+				rows.forEach(function(row, index) {
+					console.log("accept sends row: " + JSON.stringify(row));
+					// send new user to server
+
+					$.post('add_tm', row, function(data, status, xhr) {
+						// successfully send it to server.  // Check the response
+						if(1 == data.error) {
+							$.messager.alert("Error", data.error_msg);
+						}
+					}, "json");
+				});
+			}
+			else {
+				// no rows given back.
+				// unfortunately, easyui does not recognize if only the user was changes :-(
+				// Without rows I use the editIndex and send the current row to the server
+				var row = $('#tm').datagrid('getRows')[rowIndex];
+				console.log("send current index: " + rowIndex + " to the server " + JSON.stringify(row));
+					$.post('add_tm', row, function(data, status, xhr) {
+						// successfully send it to server.  // Check the response
+						if(1 == data.error) {
+							$.messager.alert("Error", data.error_msg);
+						}
+					}, "json");
+			}
             //$('#tm').datagrid('reload');
+			//$('#tm').datagrid('acceptChanges');
 		}
 	}
 
 	function removeit() {
+		console.log("removeit");
 		if(editIndex != undefined)
         {
 		    $('#tm').datagrid('cancelEdit', editIndex);
@@ -88,6 +109,7 @@
 
 	function reject() {
 		$('#tm').datagrid('rejectChanges');
+		editIndex = undefined;
 	}
 
     function getChanges() {
@@ -96,20 +118,12 @@
     }
 
 	function onClickCell(index, field) {
+		console.log("onCLickCell editIndex = " + editIndex + " index: " + index);
 		if(editIndex != index) {
 			if(endEditing()) {
 				$('#tm').datagrid('selectRow', index)
 						.datagrid('beginEdit', index);
 				var ed = $('#tm').datagrid('getEditor', {index:index,field:field});
-                if("user" != field) {
-                    var combo = ($('#tm').datagrid('getEditor', {index:index,field:"user"})).target;
-                    if(null != combo) {
-                        var userName = combo.combobox('getValue');
-                        console.log("onClickCell combobox getValue: " + userName);
-                        console.log("onCickCell combobox: " + JSON.stringify(combo.combobox));
-                        $('#tm').datagrid('getRows')[index]['user_name'] = combo.combobox('getText');
-                    }
-                }
 				($(ed.target).data('textbox') ? $(ed.target).textbox('textbox') : $(ed.target)).focus();
 				editIndex = index;
 			}
@@ -128,14 +142,13 @@
 			onClickCell: onClickCell,
 			columns: [[
 				{field:'id',title:'ID',width:100,hidden:true},
-				{field:'date',title:'Date',width:300,editor:{type:'datebox',options:{required:true}}},
-				{field:'energy',title:'Energy',width:300,editor:{type:'numberbox',options:{min:0,required:true}}},
-				{field:'distance',title:'Distance',width:300,editor:{type:'numberbox',options:{min:0,precision:2,required:true}}},
-				{field:'user',title:'User',width:300,editor:{type:'combobox',options:{valueField:'user',textField:'user_name',method:'get',url:'get_users_for_combo',required:true,
+				{field:'date',title:'Date',width:100,editor:{type:'datebox',options:{required:true}}},
+				{field:'energy',title:'Energy',width:100,editor:{type:'numberbox',options:{min:0,required:true}}},
+				{field:'distance',title:'Distance',width:100,editor:{type:'numberbox',options:{min:0,precision:2,required:true}}},
+				{field:'user_id',title:'User',width:100,editor:{type:'combobox',options:{valueField:'user_id',textField:'user_name',method:'get',url:'get_users_for_combo',required:true,
                 onClickCell: onClickCell,
                 }},
 						formatter:function(value,row){
-                            console.log("datagrid formatter: " + JSON.stringify(row));
 							return row.user_name;
 						}
                 }

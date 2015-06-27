@@ -22,6 +22,7 @@ sub all_tm {
             energy => $treadmill_entry[2],
             distance => $treadmill_entry[3],
             user_name => $users->{$treadmill_entry[4]},
+			user_id => $treadmill_entry[4],
         });
     }
     $sth->finish;
@@ -56,7 +57,7 @@ sub get_users {
     my $sth = $db->prepare('SELECT user_id, user_name FROM datauser');
     $sth->execute;
     while(my @user = $sth->fetchrow_array) {
-        push($users, {user => $user[0], user_name => $user[1]});
+        push($users, {user_id => $user[0], user_name => $user[1]});
     }
     $sth->finish;
 
@@ -71,7 +72,7 @@ sub add_tm {
     my $date = $self->param('date') // undef;
     my $energy = $self->param('energy') // undef;
     my $distance = $self->param('distance') // undef;
-    my $user_id = $self->param('user') // undef;
+    my $user_id = $self->param('user_id') // undef;
 
     say "id ", $id;
     say "date ", $date;
@@ -85,7 +86,7 @@ sub add_tm {
     return $self->render(json => { error => 1, error_msg => "user id not set" }) unless $user_id =~ /\d+/;
     
     if(-1 != $id) {
-        $db->do('UPDATE datatreadmill SET treadmill_date = ?, treadmill_energy = ?, treadmill_distance = ?, treadmill_user_id = ?', undef, $date, $energy, $distance, $user_id);
+        $db->do('UPDATE treadmill SET treadmill_date = ?, treadmill_energy = ?, treadmill_distance = ?, treadmill_user_id = ? WHERE treadmill_id = ?', undef, $date, $energy, $distance, $user_id, $id);
     }
     else {
         $db->do('INSERT INTO treadmill(treadmill_date, treadmill_energy, treadmill_distance, treadmill_user_id) VALUES(?,?,?,?)', undef, $date, $energy, $distance, $user_id);
