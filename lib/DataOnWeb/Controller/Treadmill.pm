@@ -12,17 +12,18 @@ sub all_tm {
     my $db = $self->app->db;
 
     my $users = $self->get_all_users_by_id();
-    my $sth = $db->prepare("SELECT * FROM treadmill");
+    my $sth = $db->prepare("SELECT treadmill_id,treadmill_date,treadmill_duration,treadmill_energy,treadmill_distance,treadmill_user_id FROM treadmill");
     $sth->execute;
     my $treadmill_entries = { total => 0, rows => [] };
     while(my @treadmill_entry = $sth->fetchrow_array) {
         $treadmill_entries->{total}++;
         push(@{$treadmill_entries->{rows}}, { id => $treadmill_entry[0],
             date => $treadmill_entry[1],
-            energy => $treadmill_entry[2],
-            distance => $treadmill_entry[3],
-            user_name => $users->{$treadmill_entry[4]},
-			user_id => $treadmill_entry[4],
+			duration => $treadmill_entry[2],
+            energy => $treadmill_entry[3],
+            distance => $treadmill_entry[4],
+            user_name => $users->{$treadmill_entry[5]},
+			user_id => $treadmill_entry[6],
         });
     }
     $sth->finish;
@@ -70,26 +71,29 @@ sub add_tm {
 
     my $id = $self->param('id');
     my $date = $self->param('date') // undef;
+	my $duration = $self->param('duration') // undef;
     my $energy = $self->param('energy') // undef;
     my $distance = $self->param('distance') // undef;
     my $user_id = $self->param('user_id') // undef;
 
     say "id ", $id;
     say "date ", $date;
+	say "duration", $duration;
     say "energy ", $energy;
     say "distance ", $distance;
     say "user id ", $user_id;
 
     return $self->render(json => { error => 1, error_msg => "date not set" }) unless $date =~ /\w+/;;
+	return $self->render(json => { error => 1, error_msg => "duration not set" }) unless $duration =~ /\d+/;
     return $self->render(json => { error => 1, error_msg => "energy not set" }) unless $energy =~ /\d+/;
     return $self->render(json => { error => 1, error_msg => "distance not set" }) unless $distance =~ /\d+\.?\d+/;
     return $self->render(json => { error => 1, error_msg => "user id not set" }) unless $user_id =~ /\d+/;
     
     if(-1 != $id) {
-        $db->do('UPDATE treadmill SET treadmill_date = ?, treadmill_energy = ?, treadmill_distance = ?, treadmill_user_id = ? WHERE treadmill_id = ?', undef, $date, $energy, $distance, $user_id, $id);
+        $db->do('UPDATE treadmill SET treadmill_date = ?, treadmill_duration = ?, treadmill_energy = ?, treadmill_distance = ?, treadmill_user_id = ? WHERE treadmill_id = ?', undef, $date, $duration, $energy, $distance, $user_id, $id);
     }
     else {
-        $db->do('INSERT INTO treadmill(treadmill_date, treadmill_energy, treadmill_distance, treadmill_user_id) VALUES(?,?,?,?)', undef, $date, $energy, $distance, $user_id);
+        $db->do('INSERT INTO treadmill(treadmill_date, treadmill_duration, treadmill_energy, treadmill_distance, treadmill_user_id) VALUES(?,?,?,?,?)', undef, $date, $duration, $energy, $distance, $user_id);
     }
 
     $self->render(json => "OK");

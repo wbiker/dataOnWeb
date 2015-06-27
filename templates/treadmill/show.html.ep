@@ -30,7 +30,7 @@
             $('#tm').datagrid('getRows')[editIndex]['user_id'] = user_id;
 			console.log("row after add cb value: " + JSON.stringify(row));
 
-			ed.target.text('setValue', ed.target.combobox('getText'));
+			$(ed.target).text('setValue', ed.target.combobox('getValue'));
 
 			$('#tm').datagrid('endEdit', editIndex);
 			editIndex = undefined;
@@ -85,7 +85,7 @@
 					}, "json");
 			}
             //$('#tm').datagrid('reload');
-			//$('#tm').datagrid('acceptChanges');
+			$('#tm').datagrid('acceptChanges');
 		}
 	}
 
@@ -143,6 +143,7 @@
 			columns: [[
 				{field:'id',title:'ID',width:100,hidden:true},
 				{field:'date',title:'Date',width:100,editor:{type:'datebox',options:{required:true}}},
+				{field:'duration',title:'Duration',width:100,editor:{type:'numberbox',options:{min:0,required:true}}},
 				{field:'energy',title:'Energy',width:100,editor:{type:'numberbox',options:{min:0,required:true}}},
 				{field:'distance',title:'Distance',width:100,editor:{type:'numberbox',options:{min:0,precision:2,required:true}}},
 				{field:'user_id',title:'User',width:100,editor:{type:'combobox',options:{valueField:'user_id',textField:'user_name',method:'get',url:'get_users_for_combo',required:true,
